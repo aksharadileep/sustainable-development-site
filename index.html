@@ -4,248 +4,682 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable Development Goals</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        .goal-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .goal {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .goal img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .goal h3 {
-            font-size: 1.5em;
-            margin: 15px 0;
-        }
-        .goal-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .goal-button:hover {
-            background-color: #45a049;
-        }
-        .goal-description {
-            display: none;
-            margin-top: 10px;
-            font-size: 1em;
-            color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
         <h1>Sustainable Development Goals</h1>
+        <p class="subtitle">
+            The 17 Global Goals to achieve a better and more sustainable future for all by 2030
+        </p>
     </header>
 
+    <!-- Goals Container -->
     <div class="goal-container">
+
         <!-- Goal 1 -->
         <div class="goal">
-            <img src="pexels-mumtahina-tanni-1080117-3347949.jpg" alt="Goal 1: No Poverty">
-            <h3>Goal 1: No Poverty</h3>
-            <button class="goal-button" onclick="showGoal('goal1')">Learn More</button>
-            <div id="goal1" class="goal-description">
-                <p>SDG 1 aims to end poverty in all its forms everywhere. It focuses on ensuring equal access to resources and services, reducing the number of people living in poverty, and providing social safety nets.</p>
+            <div class="goal-header">
+                <div class="goal-number">1</div>
+                <img src="assets/pexels-mumtahina-tanni-1080117-3347949.jpg" alt="No Poverty" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">No Poverty</h3>
+                <p class="goal-description">
+                    End poverty in all its forms everywhere by 2030. This goal focuses on social protection systems, equal rights to economic resources, and building resilience of the poor.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">10%</div>
+                        <div class="stat-label">Global Target</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">736M</div>
+                        <div class="stat-label">People in Poverty</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="1">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-1">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Eradicate extreme poverty for all people everywhere</li>
+                        <li>Reduce at least by half the proportion of people living in poverty</li>
+                        <li>Implement social protection systems and measures for all</li>
+                    </ul>
+                    <p>Poverty is more than lack of income — it's lack of access to basic services, education, and opportunities.</p>
+                </div>
             </div>
         </div>
-        
+
         <!-- Goal 2 -->
         <div class="goal">
-            <img src="pexels-mart-production-8078361.jpg" alt="Goal 2: Zero Hunger">
-            <h3>Goal 2: Zero Hunger</h3>
-            <button class="goal-button" onclick="showGoal('goal2')">Learn More</button>
-            <div id="goal2" class="goal-description">
-                <p>SDG 2 aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture. The goal encourages sustainable farming practices and supports communities in need of food access.</p>
+            <div class="goal-header">
+                <div class="goal-number">2</div>
+                <img src="assets/pexels-mart-production-8078361.jpg" alt="Zero Hunger" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Zero Hunger</h3>
+                <p class="goal-description">
+                    End hunger, achieve food security and improved nutrition, and promote sustainable agriculture. Ensure access to safe, nutritious, and sufficient food year-round.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">690M</div>
+                        <div class="stat-label">Hungry People</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">144M</div>
+                        <div class="stat-label">Stunted Children</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="2">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-2">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>End hunger and ensure access to safe, nutritious food</li>
+                        <li>End all forms of malnutrition</li>
+                        <li>Double agricultural productivity and incomes of small-scale food producers</li>
+                    </ul>
+                    <p>Hunger and malnutrition are barriers to sustainable development, creating traps from which people cannot easily escape.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 3 -->
         <div class="goal">
-            <img src="pexels-cliff-booth-4057525.jpg" alt="Goal 3: Good Health and Well-Being">
-            <h3>Goal 3: Good Health and Well-Being</h3>
-            <button class="goal-button" onclick="showGoal('goal3')">Learn More</button>
-            <div id="goal3" class="goal-description">
-                <p>SDG 3 focuses on ensuring healthy lives and promoting well-being for all at all ages. This includes universal access to healthcare, maternal health, mental health, and reducing mortality rates.</p>
+            <div class="goal-header">
+                <div class="goal-number">3</div>
+                <img src="assets/pexels-cliff-booth-4057525.jpg" alt="Good Health and Well-Being" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Good Health and Well-Being</h3>
+                <p class="goal-description">
+                    Ensure healthy lives and promote well-being for all at all ages. This includes reducing maternal mortality, ending preventable deaths, and achieving universal health coverage.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">400M</div>
+                        <div class="stat-label">No Basic Healthcare</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5.2M</div>
+                        <div class="stat-label">Children deaths/year</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="3">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-3">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Reduce global maternal mortality ratio</li>
+                        <li>End preventable deaths of newborns and children under 5</li>
+                        <li>End epidemics of AIDS, tuberculosis, malaria and neglected tropical diseases</li>
+                    </ul>
+                    <p>Health is essential for sustainable development and a foundation for thriving communities and economies.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 4 -->
         <div class="goal">
-            <img src="pexels-cottonbro-6595039.jpg" alt="Goal 4: Quality Education">
-            <h3>Goal 4: Quality Education</h3>
-            <button class="goal-button" onclick="showGoal('goal4')">Learn More</button>
-            <div id="goal4" class="goal-description">
-                <p>SDG 4 aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. It emphasizes access to education for marginalized communities and increasing literacy rates worldwide.</p>
+            <div class="goal-header">
+                <div class="goal-number">4</div>
+                <img src="assets/pexels-cottonbro-6595039.jpg" alt="Quality Education" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Quality Education</h3>
+                <p class="goal-description">
+                    Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. Education enables upward socioeconomic mobility and is key to escaping poverty.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">258M</div>
+                        <div class="stat-label">Children not in school</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">617M</div>
+                        <div class="stat-label">Illiterate youth</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="4">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-4">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Ensure all children complete free, equitable and quality education</li>
+                        <li>Increase number of youth and adults with relevant skills</li>
+                        <li>Eliminate gender disparities in education</li>
+                    </ul>
+                    <p>Education is not only a right but a passport to human development that opens doors to better livelihoods.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 5 -->
         <div class="goal">
-            <img src="pexels-magda-ehlers-pexels-1386336.jpg" alt="Goal 5: Gender Equality">
-            <h3>Goal 5: Gender Equality</h3>
-            <button class="goal-button" onclick="showGoal('goal5')">Learn More</button>
-            <div id="goal5" class="goal-description">
-                <p>SDG 5 seeks to achieve gender equality and empower all women and girls. This goal addresses issues like gender-based violence, unequal pay, and promotes the participation of women in leadership positions.</p>
+            <div class="goal-header">
+                <div class="goal-number">5</div>
+                <img src="assets/pexels-magda-ehlers-pexels-1386336.jpg" alt="Gender Equality" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Gender Equality</h3>
+                <p class="goal-description">
+                    Achieve gender equality and empower all women and girls. Ending all discrimination against women and girls is not only a basic human right, but crucial for sustainable development.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">24%</div>
+                        <div class="stat-label">Parliament seats held by women</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1 in 3</div>
+                        <div class="stat-label">Women experience violence</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="5">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-5">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>End all forms of discrimination against all women and girls everywhere</li>
+                        <li>Eliminate all forms of violence against women and girls</li>
+                        <li>Ensure women's full participation in leadership and decision-making</li>
+                    </ul>
+                    <p>Gender equality is not only a fundamental human right but a necessary foundation for a peaceful, prosperous and sustainable world.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 6 -->
         <div class="goal">
-            <img src="pexels-shvetsa-3943905.jpg" alt="Goal 6: Clean Water and Sanitation">
-            <h3>Goal 6: Clean Water and Sanitation</h3>
-            <button class="goal-button" onclick="showGoal('goal6')">Learn More</button>
-            <div id="goal6" class="goal-description">
-                <p>SDG 6 aims to ensure availability and sustainable management of water and sanitation for all. It emphasizes the importance of clean water access and improved sanitation facilities, especially in underserved areas.</p>
+            <div class="goal-header">
+                <div class="goal-number">6</div>
+                <img src="assets/pexels-shvetsa-3943905.jpg" alt="Clean Water and Sanitation" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Clean Water and Sanitation</h3>
+                <p class="goal-description">
+                    Ensure availability and sustainable management of water and sanitation for all. Water scarcity affects more than 40% of people globally, an alarming figure projected to rise.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">2.2B</div>
+                        <div class="stat-label">Lack safe water</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4.2B</div>
+                        <div class="stat-label">Lack safe sanitation</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="6">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-6">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Achieve universal access to safe and affordable drinking water</li>
+                        <li>Achieve access to adequate sanitation and hygiene for all</li>
+                        <li>Improve water quality by reducing pollution and minimizing release of hazardous chemicals</li>
+                    </ul>
+                    <p>Clean, accessible water for all is essential for health, education, and economic productivity.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 7 -->
         <div class="goal">
-            <img src="pexels-kindelmedia-9875423.jpg" alt="Goal 7: Affordable and Clean Energy">
-            <h3>Goal 7: Affordable and Clean Energy</h3>
-            <button class="goal-button" onclick="showGoal('goal7')">Learn More</button>
-            <div id="goal7" class="goal-description">
-                <p>SDG 7 focuses on ensuring access to affordable, reliable, sustainable, and modern energy for all. This includes increasing the use of renewable energy sources and improving energy efficiency worldwide.</p>
+            <div class="goal-header">
+                <div class="goal-number">7</div>
+                <img src="assets/pexels-kindelmedia-9875423.jpg" alt="Affordable and Clean Energy" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Affordable and Clean Energy</h3>
+                <p class="goal-description">
+                    Ensure access to affordable, reliable, sustainable and modern energy for all. Energy is central to nearly every major challenge and opportunity the world faces today.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">759M</div>
+                        <div class="stat-label">Without electricity</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">2.6B</div>
+                        <div class="stat-label">Use polluting fuels</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="7">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-7">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Ensure universal access to affordable, reliable and modern energy services</li>
+                        <li>Increase substantially the share of renewable energy in the global energy mix</li>
+                        <li>Double the global rate of improvement in energy efficiency</li>
+                    </ul>
+                    <p>Transitioning to clean energy is key to combating climate change and fostering sustainable development.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 8 -->
         <div class="goal">
-            <img src="pexels-anna-nekrashevich-6801872.jpg" alt="Goal 8: Decent Work and Economic Growth">
-            <h3>Goal 8: Decent Work and Economic Growth</h3>
-            <button class="goal-button" onclick="showGoal('goal8')">Learn More</button>
-            <div id="goal8" class="goal-description">
-                <p>SDG 8 aims to promote sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all. It includes improving labor conditions and fostering entrepreneurship and innovation.</p>
+            <div class="goal-header">
+                <div class="goal-number">8</div>
+                <img src="assets/pexels-anna-nekrashevich-6801872.jpg" alt="Decent Work and Economic Growth" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Decent Work and Economic Growth</h3>
+                <p class="goal-description">
+                    Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all. Sustainable economic growth requires societies to create conditions for people to access quality jobs.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">207M</div>
+                        <div class="stat-label">Unemployed in 2022</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1 in 5</div>
+                        <div class="stat-label">Youth not in employment/education</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="8">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-8">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Sustain per capita economic growth in accordance with national circumstances</li>
+                        <li>Achieve higher levels of economic productivity through diversification, technological upgrading and innovation</li>
+                        <li>Promote development-oriented policies that support productive activities and decent job creation</li>
+                    </ul>
+                    <p>Decent work means productive work that delivers a fair income, security, and social protection for families.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 9 -->
         <div class="goal">
-            <img src="pexels-chevanon-1108101.jpg" alt="Goal 9: Industry, Innovation, and Infrastructure">
-            <h3>Goal 9: Industry, Innovation, and Infrastructure</h3>
-            <button class="goal-button" onclick="showGoal('goal9')">Learn More</button>
-            <div id="goal9" class="goal-description">
-                <p>SDG 9 focuses on building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. This goal supports economic development through technological advancements.</p>
+            <div class="goal-header">
+                <div class="goal-number">9</div>
+                <img src="assets/pexels-chevanon-1108101.jpg" alt="Industry, Innovation and Infrastructure" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Industry, Innovation and Infrastructure</h3>
+                <p class="goal-description">
+                    Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation. Investments in infrastructure are crucial to achieving sustainable development.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">16%</div>
+                        <div class="stat-label">Internet access in LDCs</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">2.6%</div>
+                        <div class="stat-label">Manufacturing in LDCs</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="9">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-9">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Develop quality, reliable, sustainable and resilient infrastructure</li>
+                        <li>Promote inclusive and sustainable industrialization</li>
+                        <li>Enhance scientific research and upgrade industrial capabilities</li>
+                    </ul>
+                    <p>Technological progress is key to finding lasting solutions to both economic and environmental challenges.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 10 -->
         <div class="goal">
-            <img src="pexels-life-matters-3043471-4613912.jpg" alt="Goal 10: Reduced Inequality">
-            <h3>Goal 10: Reduced Inequality</h3>
-            <button class="goal-button" onclick="showGoal('goal10')">Learn More</button>
-            <div id="goal10" class="goal-description">
-                <p>SDG 10 seeks to reduce inequality within and among countries. This goal focuses on policies that promote equal opportunity, empower marginalized groups, and ensure the fair distribution of resources.</p>
+            <div class="goal-header">
+                <div class="goal-number">10</div>
+                <img src="assets/pexels-life-matters-3043471-4613912.jpg" alt="Reduced Inequality" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Reduced Inequality</h3>
+                <p class="goal-description">
+                    Reduce inequality within and among countries. The international community has made significant strides towards lifting people out of poverty, but inequality persists.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">71%</div>
+                        <div class="stat-label">World population live in countries with rising inequality</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">26</div>
+                        <div class="stat-label">People own as much as poorest 50%</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="10">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-10">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Sustain income growth of the bottom 40% of the population at a rate higher than the national average</li>
+                        <li>Empower and promote social, economic and political inclusion of all</li>
+                        <li>Ensure equal opportunity and reduce inequalities of outcome</li>
+                    </ul>
+                    <p>Inequality threatens long-term social cohesion and economic growth. Reducing it is essential for sustainable development.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 11 -->
         <div class="goal">
-            <img src="pexels-akilmazumder-1072824.jpg" alt="Goal 11: Sustainable Cities and Communities">
-            <h3>Goal 11: Sustainable Cities and Communities</h3>
-            <button class="goal-button" onclick="showGoal('goal11')">Learn More</button>
-            <div id="goal11" class="goal-description">
-                <p>SDG 11 aims to make cities and human settlements inclusive, safe, resilient, and sustainable. This includes reducing urban sprawl, providing access to affordable housing, and creating sustainable public transport systems.</p>
+            <div class="goal-header">
+                <div class="goal-number">11</div>
+                <img src="assets/pexels-pixabay-373912.jpg" alt="Sustainable Cities and Communities" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Sustainable Cities and Communities</h3>
+                <p class="goal-description">
+                    Make cities and human settlements inclusive, safe, resilient and sustainable. Urbanization presents opportunities for sustainable development but also challenges.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">68%</div>
+                        <div class="stat-label">Population will live in urban areas by 2050</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">90%</div>
+                        <div class="stat-label">Urban waste not properly treated</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="11">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-11">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Ensure access for all to adequate, safe and affordable housing and basic services</li>
+                        <li>Provide access to safe, affordable, accessible and sustainable transport systems</li>
+                        <li>Enhance inclusive and sustainable urbanization and capacity for participatory, integrated planning</li>
+                    </ul>
+                    <p>Urban areas are hubs for ideas, commerce, culture, science, and social development, but they must be sustainable and resilient.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 12 -->
         <div class="goal">
-            <img src="pexels-shvetsa-5953774.jpg" alt="Goal 12: Responsible Consumption and Production">
-            <h3>Goal 12: Responsible Consumption and Production</h3>
-            <button class="goal-button" onclick="showGoal('goal12')">Learn More</button>
-            <div id="goal12" class="goal-description">
-                <p>SDG 12 focuses on ensuring sustainable consumption and production patterns. It aims to reduce waste, encourage recycling, and improve the efficiency of resource use to create a circular economy.</p>
+            <div class="goal-header">
+                <div class="goal-number">12</div>
+                <img src="assets/pexels-karolina-grabowska-4386482.jpg" alt="Responsible Consumption and Production" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Responsible Consumption and Production</h3>
+                <p class="goal-description">
+                    Ensure sustainable consumption and production patterns. Efficient management of our shared natural resources and the way we dispose of toxic waste and pollutants is essential.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">1/3</div>
+                        <div class="stat-label">Food wasted globally</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1.3B tons</div>
+                        <div class="stat-label">Municipal solid waste generated annually</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="12">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-12">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Implement sustainable consumption and production patterns</li>
+                        <li>Reduce waste generation through prevention, reduction, recycling and reuse</li>
+                        <li>Encourage companies to adopt sustainable practices and sustainability reporting</li>
+                    </ul>
+                    <p>Changing consumption patterns is essential to reduce the strain on natural resources and prevent environmental degradation.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 13 -->
         <div class="goal">
-            <img src="pexels-akilmazumder-1072824.jpg" alt="Goal 13: Climate Action">
-            <h3>Goal 13: Climate Action</h3>
-            <button class="goal-button" onclick="showGoal('goal13')">Learn More</button>
-            <div id="goal13" class="goal-description">
-                <p>SDG 13 urges urgent action to combat climate change and its impacts. This includes reducing greenhouse gas emissions, promoting climate resilience, and transitioning to sustainable energy sources.</p>
+            <div class="goal-header">
+                <div class="goal-number">13</div>
+                <img src="assets/pexels-pixabay-459225.jpg" alt="Climate Action" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Climate Action</h3>
+                <p class="goal-description">
+                    Take urgent action to combat climate change and its impacts. Climate change is one of the greatest challenges of our time and affects everyone globally.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">1.1°C</div>
+                        <div class="stat-label">Global temperature rise since pre-industrial</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">20M</div>
+                        <div class="stat-label">People displaced by climate disasters/year</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="13">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-13">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Strengthen resilience and adaptive capacity to climate-related hazards</li>
+                        <li>Integrate climate change measures into national policies, strategies, and planning</li>
+                        <li>Improve education, awareness-raising, and human and institutional capacity on climate change mitigation</li>
+                    </ul>
+                    <p>Urgent climate action can save lives, protect livelihoods, and ensure a sustainable planet for future generations.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 14 -->
         <div class="goal">
-            <img src="pexels-elien-686681350-30131694.jpg" alt="Goal 14: Life Below Water">
-            <h3>Goal 14: Life Below Water</h3>
-            <button class="goal-button" onclick="showGoal('goal14')">Learn More</button>
-            <div id="goal14" class="goal-description">
-                <p>SDG 14 focuses on conserving and sustainably using the oceans, seas, and marine resources. It includes reducing ocean pollution, protecting marine ecosystems, and improving sustainable fisheries.</p>
+            <div class="goal-header">
+                <div class="goal-number">14</div>
+                <img src="assets/pexels-pixabay-2156.jpg" alt="Life Below Water" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Life Below Water</h3>
+                <p class="goal-description">
+                    Conserve and sustainably use the oceans, seas, and marine resources. Oceans are vital for food security, climate regulation, and economic development.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">33%</div>
+                        <div class="stat-label">Fish stocks overfished</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">8M tons</div>
+                        <div class="stat-label">Plastic enters oceans annually</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="14">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-14">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Prevent and reduce marine pollution</li>
+                        <li>Sustainably manage and protect marine ecosystems</li>
+                        <li>Regulate harvesting and end overfishing</li>
+                    </ul>
+                    <p>Healthy oceans are critical for biodiversity, livelihoods, and combating climate change.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 15 -->
         <div class="goal">
-            <img src="pexels-tournesolvg-7746087.jpg" alt="Goal 15: Life on Land">
-            <h3>Goal 15: Life on Land</h3>
-            <button class="goal-button" onclick="showGoal('goal15')">Learn More</button>
-            <div id="goal15" class="goal-description">
-                <p>SDG 15 aims to protect, restore, and promote the sustainable use of terrestrial ecosystems. This includes halting deforestation, combating desertification, restoring degraded land, and protecting biodiversity.</p>
+            <div class="goal-header">
+                <div class="goal-number">15</div>
+                <img src="assets/pexels-simon-migaj-1624450.jpg" alt="Life on Land" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Life on Land</h3>
+                <p class="goal-description">
+                    Protect, restore, and promote sustainable use of terrestrial ecosystems. Combat desertification, halt biodiversity loss, and conserve forests.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">1M</div>
+                        <div class="stat-label">Species threatened with extinction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10M ha/year</div>
+                        <div class="stat-label">Forests lost annually</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="15">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-15">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Combat desertification and restore degraded land and soil</li>
+                        <li>Ensure conservation of mountain ecosystems</li>
+                        <li>Protect biodiversity and halt species extinction</li>
+                    </ul>
+                    <p>Terrestrial ecosystems support life and human well-being, providing clean air, water, and fertile soils.</p>
+                </div>
             </div>
         </div>
 
         <!-- Goal 16 -->
         <div class="goal">
-            <img src="pexels-esra-salturk-1165434438-30105494.jpg" alt="Goal 16: Peace, Justice, and Strong Institutions">
-            <h3>Goal 16: Peace, Justice, and Strong Institutions</h3>
-            <button class="goal-button" onclick="showGoal('goal16')">Learn More</button>
-            <div id="goal16" class="goal-description">
-                <p>SDG 16 seeks to promote peace, justice, and strong institutions. It focuses on reducing violence, ensuring access to justice for all, and building effective, accountable institutions at all levels.</p>
+            <div class="goal-header">
+                <div class="goal-number">16</div>
+                <img src="assets/pexels-mikhail-nilov-7989405.jpg" alt="Peace, Justice and Strong Institutions" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Peace, Justice and Strong Institutions</h3>
+                <p class="goal-description">
+                    Promote peaceful and inclusive societies, provide access to justice for all, and build effective, accountable institutions at all levels.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">415M</div>
+                        <div class="stat-label">People affected by conflict</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">59%</div>
+                        <div class="stat-label">Global population in countries with weak institutions</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="16">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-16">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Significantly reduce all forms of violence</li>
+                        <li>End abuse, exploitation, trafficking, and violence against children</li>
+                        <li>Promote the rule of law at national and international levels</li>
+                    </ul>
+                    <p>Peaceful societies are essential for development, prosperity, and sustainable growth.</p>
+                </div>
             </div>
         </div>
+
+        <!-- Goal 17 -->
+        <div class="goal">
+            <div class="goal-header">
+                <div class="goal-number">17</div>
+                <img src="assets/goal17.png" alt="Partnerships for the Goals" class="goal-img">
+            </div>
+            <div class="goal-content">
+                <h3 class="goal-title">Partnerships for the Goals</h3>
+                <p class="goal-description">
+                    Strengthen the means of implementation and revitalize the global partnership 
+                    for sustainable development. Achieving the Sustainable Development Goals 
+                    requires strong collaboration between governments, private sectors, 
+                    civil society, and individuals worldwide.
+                </p>
+                <div class="goal-stats">
+                    <div class="stat">
+                        <div class="stat-value">$147B+</div>
+                        <div class="stat-label">Official Development Assistance</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">79%</div>
+                        <div class="stat-label">Internet Access in Developed Regions</div>
+                    </div>
+                </div>
+                <button class="goal-button" data-goal="17">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="goal-extended-info" id="goal-info-17">
+                    <h4>Key Targets</h4>
+                    <ul>
+                        <li>Strengthen domestic resource mobilization with international support</li>
+                        <li>Mobilize additional financial resources for developing countries</li>
+                        <li>Enhance North–South, South–South and triangular cooperation</li>
+                        <li>Promote access to environmentally sound technologies</li>
+                        <li>Improve data monitoring and accountability systems</li>
+                    </ul>
+                    <p>
+                        Sustainable development can only succeed through inclusive 
+                        global partnerships built upon shared values, vision, and goals. 
+                        Collaboration is the foundation for achieving all 17 SDGs.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <footer>
-        <p>&copy; 2025 Sustainable Development Goals | All Rights Reserved</p>
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Sustainable Development Goals</h3>
+                <p>Working together to create a sustainable, inclusive, and resilient future for all.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Goals</a>
+                <a href="#">Take Action</a>
+                <a href="#">Resources</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sustainable Development Goals. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        function showGoal(goalId) {
-            const goalDescription = document.getElementById(goalId);
-            goalDescription.style.display = (goalDescription.style.display === 'none' || goalDescription.style.display === '') ? 'block' : 'none';
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
