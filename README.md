@@ -122,6 +122,13 @@ Through this project, users can:
 17. Partnerships for the Goals
 
 ---
+## 🌐 Live Demo
+
+Explore the project live here:
+
+🔗 **Live Website:** https://aksharadileep.github.io/sustainable-development-site/
+
+The application provides an interactive experience for exploring all 17 United Nations Sustainable Development Goals (SDGs), featuring responsive design, engaging animations, informative content, and sustainability-focused educational resources.
 
 ## 👩‍💻 Author
 
